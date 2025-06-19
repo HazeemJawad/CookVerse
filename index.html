@@ -1,335 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cookverse – Connect with Professional Cooks</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cookverse – Connect with Professional Cooks </title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
-<body class="bg-black-gold">
-    <header class="fixed w-full bg-black-light shadow-md z-50">
-        <nav class="container mx-auto px-6 py-3">
-            <div class="flex items-center justify-between">
-                <div class="text-2xl font-bold text-gold">
-                    <i class="fas fa-utensils mr-2"></i>Cookverse
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-gray-300 hover:text-gold transition">Home</a>
-                    <a href="#features" class="text-gray-300 hover:text-gold transition">Features</a>
-                    <a href="#how-it-works" class="text-gray-300 hover:text-gold transition">How It Works</a>
-                    <a href="#contact" class="text-gray-300 hover:text-gold transition">Contact</a>
-                </div>
-                <div class="hidden md:block">
-                    <button class="border-2 border-gold bg-gold text-black px-6 py-2 rounded-full hover-bg-gold transition">
-                        Get Started
-                    </button>
-                </div>
-                <div class="md:hidden">
-                    <button class="text-gray-300">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
-            </div>
-        </nav>
-    </header>
+<body class="bg-[#0a0a0a] text-white font-[Poppins] scroll-smooth">
 
-    <section id="home" class="pt-24 md:pt-32 pb-16 bg-black-lighter">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-8 md:mb-0">
-                    <h1 class="text-4xl md:text-5xl font-bold text-gold mb-6">
-                        Connect with Professional Cooks for Your Perfect Meal
-                    </h1>
-                    <p class="text-lg text-gray-400 mb-8">
-                        Find and hire verified cooks for events, home dining, and special occasions. Experience personalized cooking with real-time tracking and seamless booking.
-                    </p>
-                    <div class="flex space-x-4">
-                        <button class="border-2 border-gold bg-gold text-black px-8 py-3 rounded-full hover-bg-gold transition">
-                            Find a Cook
-                        </button>
-                        <button class="border-2 border-gold text-gold px-8 py-3 rounded-full hover-bg-gold hover:text-black transition">
-                            Join as Cook
-                        </button>
-                    </div>
-                </div>
-                <div class="md:w-1/2">
-                    <img src="https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                             alt="Professional cook preparing a meal"
-                             class="rounded-lg shadow-xl">
-                </div>
-            </div>
-        </div>
-    </section>
-
-<section id="intro" class="relative bg-black-light">
-  <div class="container mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 items-center gap-12">
-    <div>
-      <h1 class="text-4xl md:text-5xl font-bold text-gold leading-tight mb-6">
-        Bring a 5-Star Chef to Your Home
-      </h1>
-      <p class="text-gray-300 text-lg mb-6">
-        Whether it's a romantic dinner, family feast, or a fun weekend party, Cookverse delivers top chefs and unforgettable meals to your doorstep.
-      </p>
-      <a href="#booking" class="inline-block bg-gold text-black font-bold py-3 px-6 rounded-full hover:bg-yellow-400 transition duration-300">
-        Book Your Cook Now
+  <!-- Header -->
+  <header class="fixed top-0 left-0 w-full bg-[#121212] z-50 shadow-md">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#home" class="flex items-center gap-3">
+        <img src="logo.png" alt="Cookverse Logo" class="w-17 h-16" />
+        <span class="text-3xl font-bold text-yellow-400">CookVerse</span>
       </a>
+      <div class="hidden md:flex gap-6 text-lg">
+        <a href="#home" class="hover:text-yellow-400">Home</a>
+        <a href="#features" class="hover:text-yellow-400">Features</a>
+        <a href="#classes" class="hover:text-yellow-400">Classes</a>
+        <a href="#contact" class="hover:text-yellow-400">Contact</a>
+      </div>
+      <div class="hidden md:flex gap-4">
+        <a href="#" class="bg-yellow-400 text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-300 transition">DOWNLOAD</a>
+        <a href="#contact" class="border-2 border-yellow-400 px-5 py-2 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition">Get Started</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden text-yellow-400 text-2xl"><i class="fas fa-bars"></i></button>
+    </nav>
+    <div class="mobile-menu hidden flex flex-col items-center gap-4 px-6 py-4 bg-[#121212] text-white md:hidden">
+      <a href="#home" class="hover:text-yellow-400">Home</a>
+      <a href="#features" class="hover:text-yellow-400">Features</a>
+      <a href="#classes" class="hover:text-yellow-400">Classes</a>
+      <a href="#contact" class="hover:text-yellow-400">Contact</a>
+      <a href="#" class="bg-yellow-400 text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-300 transition">DOWNLOAD</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="pt-36 pb-24 bg-[#0a0a0a]">
+    <div class="container mx-auto px-6 flex flex-col-reverse md:flex-row items-center gap-12">
+      <div class="md:w-1/2" data-aos="fade-right">
+        <h1 class="text-6xl font-bold text-yellow-400 mb-6">Connect with Professional Cooks for Your Perfect Meal </h1>
+        <p class="text-gray-300 text-xl mb-6">
+          CookVerse connects you with verified chefs, exclusive cooking classes, and a world of recipes.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#" class="bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition">Find a Chef</a>
+          <a href="#contact" class="border-2 border-yellow-400 text-yellow-400 px-6 py-3 rounded-full hover:bg-yellow-400 hover:text-black transition">Join as Chef</a>
+        </div>
+      </div>
+      <div class="md:w-1/2" data-aos="fade-left">
+        <img src="https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg" class="rounded-xl shadow-lg" alt="Chef Cooking">
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-24 bg-[#121212]">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center text-yellow-400 mb-16">Explore Our Features</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div data-aos="fade-up" class="bg-[#1f1f1f] p-6 rounded-xl text-center hover:scale-105 transition-transform duration-300">
+          <i class="fas fa-user-check text-yellow-400 text-4xl mb-4"></i>
+          <h3 class="text-xl font-semibold text-yellow-300 mb-2">Hire Verified Chefs</h3>
+          <p class="text-gray-400">Find talented chefs with reviews, skills, and specialties across cuisines.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100" class="bg-[#1f1f1f] p-6 rounded-xl text-center hover:scale-105 transition-transform duration-300">
+          <i class="fas fa-chalkboard-teacher text-yellow-400 text-4xl mb-4"></i>
+          <h3 class="text-xl font-semibold text-yellow-300 mb-2">Register as a Chef</h3>
+          <p class="text-gray-400">Showcase your skills, offer classes, and grow your culinary career online.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="200" class="bg-[#1f1f1f] p-6 rounded-xl text-center hover:scale-105 transition-transform duration-300">
+          <i class="fas fa-laptop-house text-yellow-400 text-4xl mb-4"></i>
+          <h3 class="text-xl font-semibold text-yellow-300 mb-2">Live Cooking Sessions</h3>
+          <p class="text-gray-400">Attend real-time interactive classes with culinary professionals worldwide.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="300" class="bg-[#1f1f1f] p-6 rounded-xl text-center hover:scale-105 transition-transform duration-300">
+          <i class="fas fa-book-open text-yellow-400 text-4xl mb-4"></i>
+          <h3 class="text-xl font-semibold text-yellow-300 mb-2">Access Recipes</h3>
+          <p class="text-gray-400">Explore hundreds of chef-curated recipes for all levels and tastes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Online Classes Section (unchanged but visually big) -->
+  <section id="classes" class="py-24 bg-[#0a0a0a]">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold text-yellow-400 mb-12">Interactive Cooking Classes</h2>
+      <p class="text-gray-300 max-w-2xl mx-auto text-lg mb-12">
+        Discover a wide range of live cooking classes taught by master chefs. Improve your skills in real time.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div data-aos="zoom-in">
+          <img src="https://images.pexels.com/photos/696218/pexels-photo-696218.jpeg" class="rounded-xl shadow-md w-full h-64 object-cover" />
+          <h3 class="text-xl font-semibold text-yellow-300 mt-4">Fresh Drinks</h3>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="80">
+          <img src="https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg" class="rounded-xl shadow-md w-full h-64 object-cover" />
+          <h3 class="text-xl font-semibold text-yellow-300 mt-4">Perfect Pasta</h3>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="160">
+          <img src="https://images.pexels.com/photos/2232/vegetables-italian-pizza-restaurant.jpg" class="rounded-xl shadow-md w-full h-64 object-cover" />
+          <h3 class="text-xl font-semibold text-yellow-300 mt-4">Pizza Mastery</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Cooking Moments & Reviews with Carousel, Stars, and Form -->
+<section id="gallery-reviews" class="py-24 bg-[#0a0a0a]">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center text-yellow-400 mb-16">Cooking Moments & Reviews</h2>
+
+    <!-- Swiper Carousel -->
+    <div class="swiper mySwiper mb-16">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg" class="rounded-xl w-full h-64 object-cover shadow-lg" alt="Dish 1"></div>
+        <div class="swiper-slide"><img src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg" class="rounded-xl w-full h-64 object-cover shadow-lg" alt="Dish 2"></div>
+        <div class="swiper-slide"><img src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg" class="rounded-xl w-full h-64 object-cover shadow-lg" alt="Dish 3"></div>
+      </div>
+      <div class="swiper-pagination mt-4"></div>
     </div>
 
-    <div class="relative">
-      <img src="https://images.pexels.com/photos/3771819/pexels-photo-3771819.jpeg" alt="Chef Cooking" class="rounded-xl shadow-2xl w-full">
-      <div class="absolute bottom-4 right-4 bg-black bg-opacity-60 text-gold px-4 py-2 rounded-lg text-sm">
-        Experience cooking like never before 🍽️
+    <!-- Reviews with Star Ratings -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+      <div class="bg-[#1f1f1f] p-6 rounded-xl shadow-lg">
+        <p class="text-gray-300 italic">"The cook made my anniversary dinner unforgettable! Absolutely delicious food."</p>
+        <div class="mt-4 text-yellow-300 font-semibold">– Huraira Malik</div>
+        <div class="mt-2 flex gap-1 text-yellow-400 text-sm">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
       </div>
+      <div class="bg-[#1f1f1f] p-6 rounded-xl shadow-lg">
+        <p class="text-gray-300 italic">"On-time, professional, and the biryani was better than any restaurant!"</p>
+        <div class="mt-4 text-yellow-300 font-semibold">– Badaruduja</div>
+        <div class="mt-2 flex gap-1 text-yellow-400 text-sm">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+        </div>
+      </div>
+      <div class="bg-[#1f1f1f] p-6 rounded-xl shadow-lg">
+        <p class="text-gray-300 italic">"Highly recommend Cookverse. Loved the variety and easy booking process."</p>
+        <div class="mt-4 text-yellow-300 font-semibold">– Zeenat Batool</div>
+        <div class="mt-2 flex gap-1 text-yellow-400 text-sm">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Submit a Review Form -->
+    <div class="max-w-2xl mx-auto bg-[#1f1f1f] p-6 rounded-xl shadow-lg">
+      <h3 class="text-2xl font-semibold text-yellow-300 mb-4">Submit a Review</h3>
+      <form class="space-y-4">
+        <input type="text" placeholder="Your Name" class="w-full p-3 bg-[#0a0a0a] text-white rounded" required />
+        <textarea placeholder="Your Review" rows="4" class="w-full p-3 bg-[#0a0a0a] text-white rounded" required></textarea>
+        <div class="flex gap-2 text-yellow-400 text-xl">
+          <label><input type="radio" name="rating" value="1" required /><i class="fas fa-star"></i></label>
+          <label><input type="radio" name="rating" value="2" /><i class="fas fa-star"></i><i class="fas fa-star"></i></label>
+          <label><input type="radio" name="rating" value="3" /><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></label>
+          <label><input type="radio" name="rating" value="4" /><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></label>
+          <label><input type="radio" name="rating" value="5" /><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></label>
+        </div>
+        <button type="submit" class="w-full bg-yellow-400 text-black py-3 rounded-full font-semibold hover:bg-yellow-300 transition">Submit Review</button>
+      </form>
     </div>
   </div>
 </section>
 
 
 
-    <section id="features" class="py-16 bg-black-light">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-gold mb-12">Key Features</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-black-lighter p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-                    <div class="text-gold text-3xl mb-4">
-                        <i class="fas fa-user-chef"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gold">Find & Hire Cooks</h3>
-                    <p class="text-gray-400">Browse verified cooks based on location, specialty, and ratings. Choose from nearby cooks or premium-rated professionals.</p>
-                </div>
-                
-                <div class="bg-black-lighter p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-                    <div class="text-gold text-3xl mb-4">
-                        <i class="fas fa-location-dot"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gold">Live Location Tracking</h3>
-                    <p class="text-gray-400">Track available cooks in real-time on an interactive map. Cooks can toggle their availability status.</p>
-                </div>
-                
-                <div class="bg-black-lighter p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-                    <div class="text-gold text-3xl mb-4">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gold">Reviews & Ratings</h3>
-                    <p class="text-gray-400">View detailed cook profiles with specialties, experience, and authentic customer reviews.</p>
-                </div>
-                
-                <div class="bg-black-lighter p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-                    <div class="text-gold text-3xl mb-4">
-                        <i class="fas fa-credit-card"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gold">Secure Payments</h3>
-                    <p class="text-gray-400">Book instantly or schedule in advance with secure online payments via Stripe or Razorpay.</p>
-                </div>
-                
-                <div class="bg-black-lighter p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-                    <div class="text-gold text-3xl mb-4">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gold">AI Assistance</h3>
-                    <p class="text-gray-400">Get help from our AI chatbot for navigation, recipe recommendations, and meal planning.</p>
-                </div>
-                
-                <div class="bg-black-lighter p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-                    <div class="text-gold text-3xl mb-4">
-                        <i class="fas fa-video"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gold">Cooking Videos</h3>
-                    <p class="text-gray-400">Access professional cooking tutorials and a comprehensive recipe library
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="how-it-works" class="py-16 bg-black-lighter">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-gold mb-12">How It Works</h2>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="bg-gold text-black w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl">1</div>
-                    <h3 class="text-xl font-semibold mb-3 text-gold">Browse Cooks</h3>
-                    <p class="text-gray-400">Search for cooks based on your location and preferences</p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="bg-gold text-black w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl">2</div>
-                    <h3 class="text-xl font-semibold mb-3 text-gold">Select & Book</h3>
-                    <p class="text-gray-400">Choose your preferred cook and book their services</p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="bg-gold text-black w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl">3</div>
-                    <h3 class="text-xl font-semibold mb-3 text-gold">Plan Menu</h3>
-                    <p class="text-gray-400">Discuss menu options and dietary preferences</p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="bg-gold text-black w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl">4</div>
-                    <h3 class="text-xl font-semibold mb-3 text-gold">Enjoy Service</h3>
-                    <p class="text-gray-400">Experience professional cooking at your location</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<section id="gallery-reviews" class="py-16 bg-black-light">
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 bg-[#121212]">
     <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center text-gold mb-12">Cooking Moments & Reviews</h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg" alt="Dish 1" class="rounded-lg shadow-lg">
-            <img src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg" alt="Dish 2" class="rounded-lg shadow-lg">
-            <img src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg" alt="Dish 3" class="rounded-lg shadow-lg">
+      <h2 class="text-4xl font-bold text-center text-yellow-400 mb-12">Get in Touch</h2>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div data-aos="fade-right">
+          <h3 class="text-2xl font-semibold text-yellow-300 mb-4">We're here to help</h3>
+          <p class="text-gray-400"><i class="fas fa-envelope text-yellow-400 mr-2"></i> cookverse1@gmail.com</p>
+          <p class="text-gray-400"><i class="fas fa-phone text-yellow-400 mr-2"></i> +92 3484725027</p>
+          <p class="text-gray-400"><i class="fas fa-map-marker-alt text-yellow-400 mr-2"></i> Air University, Kharian</p>
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-black-lighter p-6 rounded-lg shadow-lg">
-                <p class="text-gray-300 italic">"The cook made my anniversary dinner unforgettable! Absolutely delicious food."</p>
-                <div class="mt-4 text-gold font-semibold">– Emma R.</div>
-            </div>
-            <div class="bg-black-lighter p-6 rounded-lg shadow-lg">
-                <p class="text-gray-300 italic">"On-time, professional, and the biryani was better than any restaurant!"</p>
-                <div class="mt-4 text-gold font-semibold">– Sameer K.</div>
-            </div>
-            <div class="bg-black-lighter p-6 rounded-lg shadow-lg">
-                <p class="text-gray-300 italic">"Highly recommend Cookverse. Loved the variety and easy booking process."</p>
-                <div class="mt-4 text-gold font-semibold">– Alicia M.</div>
-            </div>
-        </div>
+        <form class="bg-[#0a0a0a] p-6 rounded-lg shadow-lg space-y-4" data-aos="fade-left">
+          <input type="text" placeholder="Name" class="w-full p-3 bg-[#1f1f1f] text-white rounded" required />
+          <input type="email" placeholder="Email" class="w-full p-3 bg-[#1f1f1f] text-white rounded" required />
+          <textarea rows="4" placeholder="Message" class="w-full p-3 bg-[#1f1f1f] text-white rounded" required></textarea>
+          <button type="submit" class="w-full bg-yellow-400 text-black py-3 rounded-full font-semibold hover:bg-yellow-300 transition">Send Message</button>
+        </form>
+      </div>
     </div>
-</section>
+  </section>
 
+  <!-- Footer -->
+  <footer class="bg-[#0a0a0a] text-center py-6 text-gray-400">
+    &copy; 2025 CookVerse. All rights reserved.
+  </footer>
 
-    <section id="contact" class="py-16 bg-black-light">
-        <div class="container mx-auto px-6">
-            <div class="bg-black-lighter rounded-lg shadow-xl p-8">
-                <h2 class="text-3xl font-bold text-center text-gold mb-8">Get in Touch</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                        <h3 class="text-xl font-semibold mb-4 text-gold">Contact Information</h3>
-                        <div class="space-y-4">
-                            <p class="flex items-center text-gray-400">
-                                <i class="fas fa-envelope w-6 text-gold"></i>
-                                support@cookverse.com
-                            </p>
-                            <p class="flex items-center text-gray-400">
-                                <i class="fas fa-phone w-6 text-gold"></i>
-                                +1 (555) 123-4567
-                            </p>
-                            <p class="flex items-center text-gray-400">
-                                <i class="fas fa-location-dot w-6 text-gold"></i>
-                                123 Cooking Street, Foodie City
-                            </p>
-                        </div>
-                        <div class="mt-6 flex space-x-4">
-                            <a href="#" class="text-gray-400 hover:text-gold">
-                                <i class="fab fa-facebook text-2xl"></i>
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-gold">
-                                <i class="fab fa-twitter text-2xl"></i>
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-gold">
-                                <i class="fab fa-instagram text-2xl"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <form class="space-y-4">
-                            <div>
-                                <label class="block text-gray-300 mb-2">Name</label>
-                                <input type="text" class="w-full px-4 py-2 border border-gray-600 rounded-lg bg-black-lighter text-gray-300 focus:outline-none focus:border-gold">
-                            </div>
-                            <div>
-                                <label class="block text-gray-300 mb-2">Email</label>
-                                <input type="email" class="w-full px-4 py-2 border border-gray-600 rounded-lg bg-black-lighter text-gray-300 focus:outline-none focus:border-gold">
-                            </div>
-                            <div>
-                                <label class="block text-gray-300 mb-2">Message</label>
-                                <textarea class="w-full px-4 py-2 border border-gray-600 rounded-lg bg-black-lighter text-gray-300 focus:outline-none focus:border-gold" rows="4"></textarea>
-                            </div>
-                            <button class="bg-gold text-black px-6 py-2 rounded-lg hover-bg-gold transition w-full">
-                                Send Message
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- AOS & Scroll Script -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800 });
+    document.querySelectorAll("a[href^='#']").forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+      document.querySelector('.mobile-menu').classList.toggle('hidden');
+    });
+  </script>
 
-    <footer class="bg-black-light text-gray-400 py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h4 class="text-xl font-semibold mb-4 text-gold">About Cookverse</h4>
-                    <p class="text-gray-400">Connecting food lovers with professional cooks for exceptional dining experiences.</p>
-                </div>
-                <div>
-                    <h4 class="text-xl font-semibold mb-4 text-gold">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-gold">Find a Cook</a></li>
-                        <li><a href="#" class="hover:text-gold">Become a Cook</a></li>
-                        <li><a href="#" class="hover:text-gold">How It Works</a></li>
-                        <li><a href="#" class="hover:text-gold">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-xl font-semibold mb-4 text-gold">Legal</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-gold">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-gold">Terms of Service</a></li>
-                        <li><a href="#" class="hover:text-gold">Cookie Policy</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-xl font-semibold mb-4 text-gold">Newsletter</h4>
-                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for updates and special offers.</p>
-                    <div class="flex">
-                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg w-full bg-black-lighter border border-gray-600 text-gray-400">
-                        <button class="bg-gold text-black px-4 py-2 rounded-r-lg hover-bg-gold transition">
-                            Subscribe
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p>&copy; 2024 Cookverse. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+  <!-- Swiper JS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper@11/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    loop: true,
+    pagination: { el: ".swiper-pagination", clickable: true },
+    autoplay: { delay: 3000 },
+  });
+</script>
 
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        const mobileMenuButton = document.querySelector('.md\\:hidden button');
-        const mobileMenu = document.querySelector('.md\\:flex');
-        
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            mobileMenu.classList.toggle('flex');
-            mobileMenu.classList.toggle('flex-col');
-            mobileMenu.classList.toggle('absolute');
-            mobileMenu.classList.toggle('top-16');
-            mobileMenu.classList.toggle('left-0');
-            mobileMenu.classList.toggle('w-full');
-            mobileMenu.classList.toggle('bg-black-light');
-            mobileMenu.classList.toggle('p-4');
-        });
-    </script>
 </body>
 </html>
